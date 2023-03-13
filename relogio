@@ -1,0 +1,37 @@
+programa 
+{
+  inclua biblioteca Util --> u
+  inteiro segundos=0, minutos=0, uni_hora=0, dez_hora=0
+  funcao inicio() 
+  {
+    escreva("RELÓGIO")
+  }
+  funcao conta_segundos()
+  {
+    para (inteiro segundo=0;segundo<60;segundo++)
+    {
+      segundos=segundos+1
+    }
+
+    conta_minutos()
+  }
+  funcao conta_minutos()
+  {
+    minutos=minutos+1
+    se minutos>59
+      minutos=0
+      minutos=minutos+1
+      conta_horas()
+    senao conta_segundos()
+  }
+  funcao conta_horas()
+  {
+
+  }
+  mostra_horas()
+  {
+    limpa()
+    escreva(dez_hora,uni_hora,":",minutos,":",segundos)
+    conta_segundos()
+  }
+}
